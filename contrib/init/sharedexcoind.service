@@ -1,0 +1,26 @@
+[Unit]
+Description=ShareDexCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=sharedexcoin
+Group=sharedexcoin
+
+Type=forking
+PIDFile=/var/lib/sharedexcoind/sharedexcoind.pid
+
+ExecStart=/usr/bin/sharedexcoind -daemon -pid=/var/lib/sharedexcoind/sharedexcoind.pid \
+          -conf=/etc/sharedexcoin/sharedexcoin.conf -datadir=/var/lib/sharedexcoind
+
+ExecStop=-/usr/bin/sharedexcoin-cli -conf=/etc/sharedexcoin/sharedexcoin.conf \
+         -datadir=/var/lib/sharedexcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

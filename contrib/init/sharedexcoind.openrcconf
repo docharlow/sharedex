@@ -1,0 +1,26 @@
+# /etc/conf.d/sharedexcoind: config file for /etc/init.d/sharedexcoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/sharedexcoin/sharedexcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/sharedexcoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/sharedexcoind.pid"
+
+# Where to write sharedexcoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/sharedexcoind"
+
+# User and group to own sharedexcoind process
+#BITCOIND_USER="sharedexcoin"
+#BITCOIND_GROUP="sharedexcoin"
+
+# Path to sharedexcoind executable
+#BITCOIND_BIN="/usr/bin/sharedexcoind"
+
+# Nice value to run sharedexcoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

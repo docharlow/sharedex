@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=ShareDexCoin
+Comment=ShareDexCoin P2P Cryptocurrency
+Exec=sharedexcoin-qt %u
+Terminal=false
+Type=Application
+Icon=sharedexcoin128
+MimeType=x-scheme-handler/sharedexcoin;
+Categories=Office;Finance;
+Name[en_US]=sharedexcoin-qt.desktop
