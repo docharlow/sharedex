@@ -145,7 +145,7 @@ public:
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
         genesis.nTime = 1541082638;
-        genesis.nBits = 0x1e0ffff0;
+        genesis.nBits = 0x1f00ffff;
         genesis.nNonce = 1212949;
 
         hashGenesisBlock = genesis.GetHash();
@@ -322,7 +322,7 @@ public:
         nTargetSpacing = 2 * 60;        // ShareDexCoin: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1541082638;
-        genesis.nBits = 0x1e0ffff0;
+        genesis.nBits = 0x1f00ffff;
         genesis.nNonce = 1212949;
 
         hashGenesisBlock = genesis.GetHash();
@@ -332,11 +332,11 @@ public:
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Regtest mode doesn't have any DNS seeds.
 
-        fMiningRequiresPeers = false;
-        fAllowMinDifficultyBlocks = true;
-        fDefaultConsistencyChecks = true;
-        fRequireStandard = false;
-        fMineBlocksOnDemand = true;
+        fMiningRequiresPeers = true;
+        fAllowMinDifficultyBlocks = false;
+        fDefaultConsistencyChecks = false;
+        fRequireStandard = true;
+        fMineBlocksOnDemand = false;
         fTestnetToBeDeprecatedFieldRPC = false;
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
