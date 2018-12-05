@@ -183,8 +183,8 @@ public:
 		
         vSeeds.push_back(CDNSSeedData("95.179.207.153", "95.179.207.153")); 
 		vSeeds.push_back(CDNSSeedData("207.148.29.17", "207.148.29.17"));        // Single node address
-		
-        // ShareDexCoin addresses start with 'G'
+		vSeeds.push_back(CDNSSeedData("207.246.95.58", "207.246.95.58"));        // Single node address		
+        // ShareDexCoin addresses start with 'S'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 63);
         // ShareDexCoin script addresses start with '3'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 6);
